@@ -9,7 +9,7 @@ services:
       resources:
         limits:
           memory: '1G'
-        reservation:
+        reservations:
           memory: '1G'
       restart_policy:
         condition: on-failure

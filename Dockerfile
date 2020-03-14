@@ -1,8 +1,6 @@
-FROM openjdk:11-alpine
+FROM openjdk:11
 
-RUN apk add --no-cache bash
-
-ADD ./api/target/api.jar api.jar
+ADD ./target/api.jar api.jar
 ADD ./entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]

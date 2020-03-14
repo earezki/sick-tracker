@@ -39,10 +39,7 @@ public class Bootstrap {
         Config config = new Config(properties);
 
         Vertx vertx = Vertx.vertx(new VertxOptions()
-                .setBlockedThreadCheckInterval(config.getInt("vertx.blocking.check.interval"))
-                .setAddressResolverOptions(new AddressResolverOptions()
-                        .addServer("8.8.8.8")
-                        .addServer("8.8.4.4")));
+                .setBlockedThreadCheckInterval(config.getInt("vertx.blocking.check.interval")));
 
 
         PgConnectOptions connectOptions = new PgConnectOptions()
